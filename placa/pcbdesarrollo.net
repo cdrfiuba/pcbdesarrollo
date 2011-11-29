@@ -1,0 +1,276 @@
+# EESchema Netlist Version 1.1 created  Fri 04 Nov 2011 19:03:39 ART
+(
+ ( /4EAB48FD R1 5-10K1 VR_LDR
+  ( 1 VCC )
+  ( 2 /LDR )
+ )
+ ( /4DC47BFA C1V5 C1 1uF
+  ( 1 N-000006 )
+  ( 2 N-000007 )
+ )
+ ( /4DC47C0A C1V5 C2 1uF
+  ( 1 N-000027 )
+  ( 2 N-000028 )
+ )
+ ( /4DC475FC C1V5 C3 1uF
+  ( 1 N-000011 )
+  ( 2 GND )
+ )
+ ( /4DC47C36 C1V5 C4 1uF
+  ( 1 VCC )
+  ( 2 GND )
+ )
+ ( /4DC47C22 C1V5 C5 1uF
+  ( 1 N-000029 )
+  ( 2 GND )
+ )
+ ( /4DC477D7 C1 C6 100nF
+  ( 1 VCC )
+  ( 2 GND )
+ )
+ ( /4EAB40FA C1 C7 100nF
+  ( 1 N-000045 )
+  ( 2 GND )
+ )
+ ( /4EAB40F5 C1V5 C8 10uF
+  ( 1 VCC )
+  ( 2 GND )
+ )
+ ( /4EAB40FD C1 C9 100nF
+  ( 1 VCC )
+  ( 2 GND )
+ )
+ ( /4DC4770A LED-3MM D1 LED
+  ( 1 VCC )
+  ( 2 N-000041 )
+ )
+ ( /4DC4770D LED-3MM D2 LED
+  ( 1 VCC )
+  ( 2 N-000042 )
+ )
+ ( /4DC47713 LED-3MM D3 LED
+  ( 1 VCC )
+  ( 2 N-000039 )
+ )
+ ( /4DC47715 LED-3MM D4 LED
+  ( 1 VCC )
+  ( 2 N-000043 )
+ )
+ ( /4DC47ED4 DB9FC J1 DB9
+  ( 1 ? )
+  ( 2 /RX )
+  ( 3 /TX )
+  ( 4 ? )
+  ( 5 GND )
+  ( 6 ? )
+  ( 7 ? )
+  ( 8 ? )
+  ( 9 ? )
+ )
+ ( /4EAB3F14 SIL-3 K1 CONN_3
+  ( 1 GND )
+  ( 2 /SCL )
+  ( 3 /SDA )
+ )
+ ( /4DC47FA6 pin_array_3x2 P1 CONN_3X2
+  ( 1 /MISO )
+  ( 2 VCC )
+  ( 3 /SCK )
+  ( 4 /MOSI )
+  ( 5 /RESET )
+  ( 6 GND )
+ )
+ ( /4EAB402B SIL-2 P2 CONN_2
+  ( 1 GND )
+  ( 2 N-000045 )
+ )
+ ( /4DC47664 R3 R1 220
+  ( 1 N-000024 )
+  ( 2 N-000041 )
+ )
+ ( /4DC476A1 R3 R2 220
+  ( 1 N-000037 )
+  ( 2 N-000042 )
+ )
+ ( /4DC476A7 R3 R3 220
+  ( 1 N-000039 )
+  ( 2 N-000038 )
+ )
+ ( /4DC476AB R3 R4 220
+  ( 1 N-000040 )
+  ( 2 N-000043 )
+ )
+ ( /4EAB4910 R3 R5 1K
+  ( 1 GND )
+  ( 2 /LDR )
+ )
+ ( /4DC482B6 SW_PUSH_SMALL SW1 SW_PUSH
+  ( 1 GND )
+  ( 2 N-000019 )
+ )
+ ( /4DC478DF DIP-16__300_ELL U1 MAX232
+  ( 1 N-000006 )
+  ( 2 N-000011 )
+  ( 3 N-000007 )
+  ( 4 N-000027 )
+  ( 5 N-000028 )
+  ( 6 N-000029 )
+  ( 7 ? )
+  ( 8 GND )
+  ( 9 ? )
+  ( 10 GND )
+  ( 11 /TXD )
+  ( 12 /RXD )
+  ( 13 /TX )
+  ( 14 /RX )
+  ( 15 GND )
+  ( 16 VCC )
+ )
+ ( /4DC473D3 DIP-28__300_ELL U2 AVR_ATMEGA88
+  ( 1 /RESET )
+  ( 2 /RXD )
+  ( 3 /TXD )
+  ( 4 ? )
+  ( 5 ? )
+  ( 6 N-000040 )
+  ( 7 VCC )
+  ( 8 GND )
+  ( 9 ? )
+  ( 10 ? )
+  ( 11 ? )
+  ( 12 ? )
+  ( 13 N-000019 )
+  ( 14 N-000038 )
+  ( 15 ? )
+  ( 16 ? )
+  ( 17 /MOSI )
+  ( 18 /MISO )
+  ( 19 /SCK )
+  ( 20 VCC )
+  ( 21 ? )
+  ( 22 GND )
+  ( 23 /LDR )
+  ( 24 ? )
+  ( 25 N-000037 )
+  ( 26 N-000024 )
+  ( 27 /SDA )
+  ( 28 /SCL )
+ )
+ ( /4EB45E2C TO220V-123 U3 7805FIX
+  ( 1 N-000045 )
+  ( 2 GND )
+  ( 3 VCC )
+ )
+)
+*
+{ Allowed footprints by component:
+$component C1
+ CP*
+ SM*
+$endlist
+$component C2
+ CP*
+ SM*
+$endlist
+$component C3
+ CP*
+ SM*
+$endlist
+$component C4
+ CP*
+ SM*
+$endlist
+$component C5
+ CP*
+ SM*
+$endlist
+$component C6
+ SM*
+ C?
+ C1-1
+$endlist
+$component C7
+ SM*
+ C?
+ C1-1
+$endlist
+$component C8
+ CP*
+ SM*
+$endlist
+$component C9
+ SM*
+ C?
+ C1-1
+$endlist
+$component D1
+ LED-3MM
+ LED-5MM
+ LED-10MM
+ LED-0603
+ LED-0805
+ LED-1206
+ LEDV
+$endlist
+$component D2
+ LED-3MM
+ LED-5MM
+ LED-10MM
+ LED-0603
+ LED-0805
+ LED-1206
+ LEDV
+$endlist
+$component D3
+ LED-3MM
+ LED-5MM
+ LED-10MM
+ LED-0603
+ LED-0805
+ LED-1206
+ LEDV
+$endlist
+$component D4
+ LED-3MM
+ LED-5MM
+ LED-10MM
+ LED-0603
+ LED-0805
+ LED-1206
+ LEDV
+$endlist
+$component J1
+ DB9*
+$endlist
+$component R1
+ R?
+ SM0603
+ SM0805
+ R?-*
+$endlist
+$component R2
+ R?
+ SM0603
+ SM0805
+ R?-*
+$endlist
+$component R3
+ R?
+ SM0603
+ SM0805
+ R?-*
+$endlist
+$component R4
+ R?
+ SM0603
+ SM0805
+ R?-*
+$endlist
+$component R5
+ R?
+ SM0603
+ SM0805
+ R?-*
+$endlist
+$endfootprintlist
+}
