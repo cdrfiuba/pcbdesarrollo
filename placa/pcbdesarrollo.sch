@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Fri 02 Dec 2011 09:51:51 PM ART
+EESchema Schematic File Version 2  date Sat 10 Dec 2011 08:01:56 PM ART
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -31,13 +31,14 @@ LIBS:contrib
 LIBS:valves
 LIBS:avr_atmega88
 LIBS:7805fix
+LIBS:pcbdesarrollo-cache
 EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 1
 Title "Placa de desarrollo para AVR"
-Date "2 dec 2011"
+Date "10 dec 2011"
 Rev "1.5"
 Comp "Club de Robótica - Facultad de Ingeniería - UBA"
 Comment1 ""
@@ -45,16 +46,14 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-NoConn ~ 5550 2850
-$Comp
-L MAX232 U1
-U 1 1 4DC478DF
-P 4750 2350
-F 0 "U1" H 4750 3200 70  0000 C CNN
-F 1 "MAX232" H 4750 1500 70  0000 C CNN
-	1    4750 2350
-	1    0    0    -1  
-$EndComp
+Wire Wire Line
+	8600 4800 8600 4750
+Wire Wire Line
+	8100 4600 8100 4750
+Wire Wire Line
+	8100 4750 8050 4750
+Wire Wire Line
+	8050 4750 8050 5000
 Wire Wire Line
 	2050 1350 2050 1700
 Wire Wire Line
@@ -184,6 +183,38 @@ Wire Wire Line
 	2450 2700 2450 2650
 Wire Wire Line
 	2800 1150 2400 1150
+Wire Wire Line
+	8550 5000 8600 5000
+Wire Wire Line
+	8350 4250 8600 4250
+$Comp
+L R R7
+U 1 1 4EE3E479
+P 8600 4500
+F 0 "R7" V 8680 4500 50  0000 C CNN
+F 1 "R" V 8600 4500 50  0000 C CNN
+	1    8600 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R6
+U 1 1 4EE3E3E7
+P 8300 5000
+F 0 "R6" V 8380 5000 50  0000 C CNN
+F 1 "R" V 8300 5000 50  0000 C CNN
+	1    8300 5000
+	0    1    1    0   
+$EndComp
+NoConn ~ 5550 2850
+$Comp
+L MAX232 U1
+U 1 1 4DC478DF
+P 4750 2350
+F 0 "U1" H 4750 3200 70  0000 C CNN
+F 1 "MAX232" H 4750 1500 70  0000 C CNN
+	1    4750 2350
+	1    0    0    -1  
+$EndComp
 $Comp
 L 7805FIX U3
 U 1 1 4EB45E2C
@@ -382,7 +413,7 @@ F 1 "SW_PUSH" H 2800 5670 50  0000 C CNN
 $EndComp
 Text Notes 9250 1600 2    60   ~ 0
 Interfaz RS232
-Text Notes 9600 4450 2    60   ~ 0
+Text Notes 9650 4000 2    60   ~ 0
 Conector para el programador
 $Comp
 L VCC #PWR010
@@ -435,13 +466,13 @@ Text Label 6600 5550 0    60   ~ 0
 SCK
 Text Label 6600 5450 0    60   ~ 0
 MISO
-Text Label 8600 5000 2    60   ~ 0
+Text Label 8100 4600 2    60   ~ 0
 RESET
 Text Label 9400 4900 0    60   ~ 0
 MOSI
 Text Label 8600 4900 2    60   ~ 0
 SCK
-Text Label 8600 4800 2    60   ~ 0
+Text Label 8350 4250 2    60   ~ 0
 MISO
 $Comp
 L CONN_3X2 P1
