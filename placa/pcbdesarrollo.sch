@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Sat 10 Dec 2011 08:01:56 PM ART
+EESchema Schematic File Version 2  date Sun 11 Dec 2011 01:55:13 AM ART
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -38,7 +38,7 @@ $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 1
 Title "Placa de desarrollo para AVR"
-Date "10 dec 2011"
+Date "11 dec 2011"
 Rev "1.5"
 Comp "Club de Robótica - Facultad de Ingeniería - UBA"
 Comment1 ""
@@ -47,7 +47,9 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 Wire Wire Line
-	8600 4800 8600 4750
+	8500 4800 8600 4800
+Wire Wire Line
+	9800 4400 9800 4300
 Wire Wire Line
 	8100 4600 8100 4750
 Wire Wire Line
@@ -186,15 +188,26 @@ Wire Wire Line
 Wire Wire Line
 	8550 5000 8600 5000
 Wire Wire Line
-	8350 4250 8600 4250
+	9400 4900 9800 4900
+Wire Wire Line
+	8400 4300 8500 4300
+$Comp
+L R R8
+U 1 1 4EE4327A
+P 9800 4650
+F 0 "R8" V 9880 4650 50  0000 C CNN
+F 1 "R" V 9800 4650 50  0000 C CNN
+	1    9800 4650
+	1    0    0    -1  
+$EndComp
 $Comp
 L R R7
 U 1 1 4EE3E479
-P 8600 4500
-F 0 "R7" V 8680 4500 50  0000 C CNN
-F 1 "R" V 8600 4500 50  0000 C CNN
-	1    8600 4500
-	1    0    0    -1  
+P 8500 4550
+F 0 "R7" V 8580 4550 50  0000 C CNN
+F 1 "R" V 8500 4550 50  0000 C CNN
+	1    8500 4550
+	1    0    0    1   
 $EndComp
 $Comp
 L R R6
@@ -468,11 +481,11 @@ Text Label 6600 5450 0    60   ~ 0
 MISO
 Text Label 8100 4600 2    60   ~ 0
 RESET
-Text Label 9400 4900 0    60   ~ 0
+Text Label 9800 4300 0    60   ~ 0
 MOSI
 Text Label 8600 4900 2    60   ~ 0
 SCK
-Text Label 8350 4250 2    60   ~ 0
+Text Label 8400 4300 2    60   ~ 0
 MISO
 $Comp
 L CONN_3X2 P1
