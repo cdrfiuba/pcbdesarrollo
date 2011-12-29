@@ -1,6 +1,18 @@
-update=Sun 11 Dec 2011 01:55:36 AM ART
+update=Thu 29 Dec 2011 06:49:04 PM ART
 version=1
-last_client=kicad
+last_client=pcbnew
+[cvpcb]
+version=1
+NetITyp=0
+NetIExt=.net
+PkgIExt=.pkg
+NetDir=
+LibDir=
+NetType=0
+[cvpcb/libraries]
+EquName1=devcms
+[general]
+version=1
 [eeschema]
 version=1
 LibDir=
@@ -64,18 +76,13 @@ LibName28=atmel
 LibName29=contrib
 LibName30=valves
 LibName31=avr_atmega88
-LibName32=7805fix
-[cvpcb]
-version=1
-NetIExt=net
-[cvpcb/libraries]
-EquName1=devcms
 [pcbnew]
 version=1
-PadDrlX=450
-PadDimH=700
-PadDimV=700
+PadDrlX=320
+PadDimH=600
+PadDimV=600
 BoardThickness=630
+SgPcb45=1
 TxtPcbV=800
 TxtPcbH=600
 TxtModV=600
@@ -86,7 +93,7 @@ DrawLar=150
 EdgeLar=150
 TxtLar=120
 MSegLar=150
-LastNetListRead=pcbdesarrollo.net
+LastNetListRead=
 [pcbnew/libraries]
 LibDir=
 LibName1=sockets
@@ -99,5 +106,3 @@ LibName7=display
 LibName8=valves
 LibName9=led
 LibName10=dip_sockets
-[general]
-version=1
