@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPCB (2011-05-25)-stable date = Sun 11 Dec 2011 10:17:22 PM ART
+Cmp-Mod V01 Created by CvPCB (2010-05-05 BZR 2356)-stable date = Tue 07 Feb 2012 01:31:00 PM ART
 
 BeginCmp
 TimeStamp = /4EAB48FD;
@@ -71,6 +71,20 @@ IdModule  = C1;
 EndCmp
 
 BeginCmp
+TimeStamp = /4F2BEAC4;
+Reference = CONN1;
+ValeurCmp = CONN_14;
+IdModule  = SIL-14;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F2BEAD3;
+Reference = CONN2;
+ValeurCmp = CONN_14;
+IdModule  = SIL-14;
+EndCmp
+
+BeginCmp
 TimeStamp = /4DC4770A;
 Reference = D1;
 ValeurCmp = LED;
@@ -127,6 +141,48 @@ IdModule  = SIL-2;
 EndCmp
 
 BeginCmp
+TimeStamp = /4F301F92;
+Reference = PC1;
+ValeurCmp = CONN_30X2;
+IdModule  = PIN_ARRAY_30X2;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F315013;
+Reference = PC2;
+ValeurCmp = CONN_30X2;
+IdModule  = PIN_ARRAY_30X2;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F31501A;
+Reference = PC3;
+ValeurCmp = CONN_30X2;
+IdModule  = PIN_ARRAY_30X2;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F315026;
+Reference = PC4;
+ValeurCmp = CONN_30X2;
+IdModule  = PIN_ARRAY_30X2;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F315043;
+Reference = PC5;
+ValeurCmp = CONN_30X2;
+IdModule  = PIN_ARRAY_30X2;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F315066;
+Reference = PC6;
+ValeurCmp = CONN_30X2;
+IdModule  = PIN_ARRAY_30X2;
+EndCmp
+
+BeginCmp
 TimeStamp = /4DC47664;
 Reference = R1;
 ValeurCmp = 220;
@@ -162,48 +218,6 @@ IdModule  = R3;
 EndCmp
 
 BeginCmp
-TimeStamp = /4EE3E3E7;
-Reference = R6;
-ValeurCmp = R;
-IdModule  = R3;
-EndCmp
-
-BeginCmp
-TimeStamp = /4EE3E479;
-Reference = R7;
-ValeurCmp = R;
-IdModule  = R3;
-EndCmp
-
-BeginCmp
-TimeStamp = /4EE4327A;
-Reference = R8;
-ValeurCmp = R;
-IdModule  = R3;
-EndCmp
-
-BeginCmp
-TimeStamp = /4EE5460D;
-Reference = R9;
-ValeurCmp = R;
-IdModule  = R3;
-EndCmp
-
-BeginCmp
-TimeStamp = /4EE54689;
-Reference = R10;
-ValeurCmp = R;
-IdModule  = R3;
-EndCmp
-
-BeginCmp
-TimeStamp = /4EE555DE;
-Reference = R11;
-ValeurCmp = R;
-IdModule  = R3;
-EndCmp
-
-BeginCmp
 TimeStamp = /4DC482B6;
 Reference = SW1;
 ValeurCmp = SW_PUSH;
@@ -225,10 +239,10 @@ IdModule  = DIP-28__300_ELL;
 EndCmp
 
 BeginCmp
-TimeStamp = /4EB45E2C;
+TimeStamp = /4F2C42CA;
 Reference = U3;
-ValeurCmp = 7805FIX;
-IdModule  = TO220V-123;
+ValeurCmp = 7805;
+IdModule  = TO220_VERT;
 EndCmp
 
 EndListe

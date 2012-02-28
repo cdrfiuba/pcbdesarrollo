@@ -1,4 +1,4 @@
-update=Thu 29 Dec 2011 06:49:04 PM ART
+update=Fri 10 Feb 2012 07:17:59 PM ART
 version=1
 last_client=pcbnew
 [cvpcb]
@@ -79,8 +79,8 @@ LibName31=avr_atmega88
 [pcbnew]
 version=1
 PadDrlX=320
-PadDimH=600
-PadDimV=600
+PadDimH=700
+PadDimV=700
 BoardThickness=630
 SgPcb45=1
 TxtPcbV=800
@@ -93,7 +93,7 @@ DrawLar=150
 EdgeLar=150
 TxtLar=120
 MSegLar=150
-LastNetListRead=
+LastNetListRead=pcbdesarrollo.net
 [pcbnew/libraries]
 LibDir=
 LibName1=sockets
