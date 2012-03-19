@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPCB (2011-05-25)-stable date = Sun 18 Mar 2012 02:02:57 AM ART
+Cmp-Mod V01 Created by CvPcb (2011-nov-30)-testing date = Mon 19 Mar 2012 20:23:15 ART
 
 BeginCmp
 TimeStamp = /4EAB48FD;
@@ -82,6 +82,34 @@ TimeStamp = /4F656832;
 Reference = C11;
 ValeurCmp = 10uF;
 IdModule  = C1V5;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F67AD6C;
+Reference = C12;
+ValeurCmp = 15p;
+IdModule  = C1;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F67AD79;
+Reference = C13;
+ValeurCmp = 15p;
+IdModule  = C1;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F6827C3;
+Reference = C14;
+ValeurCmp = 100nF;
+IdModule  = C1;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F67E9AC;
+Reference = C15;
+ValeurCmp = 100nF;
+IdModule  = C1;
 EndCmp
 
 BeginCmp
@@ -260,8 +288,22 @@ IdModule  = R3;
 EndCmp
 
 BeginCmp
+TimeStamp = /4F682485;
+Reference = R7;
+ValeurCmp = 10k;
+IdModule  = R3;
+EndCmp
+
+BeginCmp
 TimeStamp = /4DC482B6;
 Reference = SW1;
+ValeurCmp = SW_PUSH;
+IdModule  = SW_PUSH_SMALL;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F68247C;
+Reference = SW2;
 ValeurCmp = SW_PUSH;
 IdModule  = SW_PUSH_SMALL;
 EndCmp
@@ -292,6 +334,13 @@ TimeStamp = /4F6567CE;
 Reference = U4;
 ValeurCmp = 7133;
 IdModule  = TO92;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F67AD5D;
+Reference = X1;
+ValeurCmp = 12Mhz;
+IdModule  = HC-18UV;
 EndCmp
 
 EndListe
