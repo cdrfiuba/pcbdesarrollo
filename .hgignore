@@ -1,0 +1,9 @@
+# use glob syntax.
+syntax: glob
+
+# archivos de compilación
+*.bin
+*.hex
+
+# archivos de hg
+*.orig
