@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Tue 20 Mar 2012 20:39:18 ART
+EESchema Schematic File Version 2  date Wed 21 Mar 2012 12:49:54 ART
 LIBS:HT7133
 LIBS:7805fix
 LIBS:power
@@ -39,7 +39,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "Placa de desarrollo para AVR"
-Date "20 mar 2012"
+Date "21 mar 2012"
 Rev "1.0"
 Comp "Club de Robótica - Facultad de Ingeniería - UBA"
 Comment1 "Patricio Tula - Ernesto Corbellini - Ariel Burman"
@@ -151,7 +151,7 @@ L LED D5
 U 1 1 4F63D6FD
 P 2950 2550
 F 0 "D5" H 2950 2650 50  0000 C CNN
-F 1 "LED" H 2950 2450 50  0000 C CNN
+F 1 "ON" H 2950 2450 50  0000 C CNN
 	1    2950 2550
 	1    0    0    -1  
 $EndComp
@@ -648,7 +648,7 @@ L VR 5-10K1
 U 1 1 4EAB48FD
 P 1100 6400
 F 0 "5-10K1" V 1180 6400 50  0000 C CNN
-F 1 "VR_LDR" V 1100 6400 50  0000 C CNN
+F 1 "LDR" V 1100 6400 50  0000 C CNN
 	1    1100 6400
 	1    0    0    -1  
 $EndComp
@@ -704,7 +704,7 @@ L CONN_2 P2
 U 1 1 4EAB402B
 P 800 1200
 F 0 "P2" V 750 1200 40  0000 C CNN
-F 1 "CONN_2" V 850 1200 40  0000 C CNN
+F 1 "BATT" V 850 1200 40  0000 C CNN
 	1    800  1200
 	-1   0    0    -1  
 $EndComp
@@ -732,7 +732,7 @@ L CONN_3 K1
 U 1 1 4EAB3F14
 P 2050 7000
 F 0 "K1" V 2000 7000 50  0000 C CNN
-F 1 "CONN_3" V 2100 7000 40  0000 C CNN
+F 1 "I2C" V 2100 7000 40  0000 C CNN
 	1    2050 7000
 	0    1    1    0   
 $EndComp
@@ -777,7 +777,7 @@ L SW_PUSH SW1
 U 1 1 4DC482B6
 P 1850 6100
 F 0 "SW1" H 2000 6210 50  0000 C CNN
-F 1 "SW_PUSH" H 1850 6020 50  0000 C CNN
+F 1 "PULSADOR" H 1850 6020 50  0000 C CNN
 	1    1850 6100
 	1    0    0    -1  
 $EndComp
@@ -960,10 +960,10 @@ $EndComp
 $Comp
 L GND #PWR029
 U 1 1 4DC477EC
-P 6150 4950
-F 0 "#PWR029" H 6150 4950 30  0001 C CNN
-F 1 "GND" H 6150 4880 30  0001 C CNN
-	1    6150 4950
+P 6300 5050
+F 0 "#PWR029" H 6300 5050 30  0001 C CNN
+F 1 "GND" H 6300 4980 30  0001 C CNN
+	1    6300 5050
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -980,7 +980,7 @@ L LED D4
 U 1 1 4DC47715
 P 1200 5150
 F 0 "D4" H 1050 5050 50  0000 C CNN
-F 1 "LED" H 1200 5050 50  0000 C CNN
+F 1 "LED4" H 1200 5050 50  0000 C CNN
 	1    1200 5150
 	0    -1   1    0   
 $EndComp
@@ -989,7 +989,7 @@ L LED D3
 U 1 1 4DC47713
 P 1000 5400
 F 0 "D3" H 850 5300 50  0000 C CNN
-F 1 "LED" H 1000 5300 50  0000 C CNN
+F 1 "LED3" H 1000 5300 50  0000 C CNN
 	1    1000 5400
 	0    1    1    0   
 $EndComp
@@ -998,7 +998,7 @@ L LED D2
 U 1 1 4DC4770D
 P 1150 4150
 F 0 "D2" H 1000 4050 50  0000 C CNN
-F 1 "LED" H 1150 4050 50  0000 C CNN
+F 1 "LED2" H 1150 4050 50  0000 C CNN
 	1    1150 4150
 	0    -1   1    0   
 $EndComp
@@ -1007,7 +1007,7 @@ L LED D1
 U 1 1 4DC4770A
 P 950 4250
 F 0 "D1" H 800 4150 50  0000 C CNN
-F 1 "LED" H 950 4150 50  0000 C CNN
+F 1 "LED1" H 950 4150 50  0000 C CNN
 	1    950  4250
 	0    -1   1    0   
 $EndComp
@@ -1224,7 +1224,7 @@ L SW_PUSH SW2
 U 1 1 4F68247C
 P 1850 3500
 F 0 "SW2" H 2000 3610 50  0000 C CNN
-F 1 "SW_PUSH" H 1850 3420 50  0000 C CNN
+F 1 "RESET" H 1850 3420 50  0000 C CNN
 	1    1850 3500
 	1    0    0    -1  
 $EndComp
@@ -1350,7 +1350,7 @@ P 3200 2150
 F 0 "P3" V 3150 2150 50  0000 C CNN
 F 1 "CONN_3" V 3250 2150 40  0000 C CNN
 	1    3200 2150
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L +5V #PWR046
@@ -1374,6 +1374,15 @@ Text Notes 9950 900  2    60   ~ 0
 Conectores para islas
 Text Notes 5450 3400 0    60   ~ 0
 Microcontrolador\n4 Leds / LDR\nPulsador / Conector I2C
+$Comp
+L C C16
+U 1 1 4F69F22E
+P 6600 4700
+F 0 "C16" H 6650 4800 50  0000 L CNN
+F 1 "100nF" H 6650 4600 50  0000 L CNN
+	1    6600 4700
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
 	1650 2500 1650 2450
 Wire Wire Line
@@ -1438,7 +1447,7 @@ Connection ~ 5700 4650
 Wire Wire Line
 	5700 4250 5700 4650
 Wire Wire Line
-	6150 4950 6150 4900
+	6150 4900 6150 4950
 Connection ~ 1050 3750
 Wire Wire Line
 	1050 3650 1050 3750
@@ -1807,4 +1816,19 @@ Connection ~ 1800 2000
 Wire Wire Line
 	11050 1200 11050 1250
 Connection ~ 11050 1250
+Wire Wire Line
+	5550 4350 6000 4350
+Wire Wire Line
+	6000 4350 6000 4200
+Wire Wire Line
+	6000 4200 6600 4200
+Wire Wire Line
+	6600 4200 6600 4500
+Wire Wire Line
+	6600 4900 6600 4950
+Wire Wire Line
+	6600 4950 6150 4950
+Wire Wire Line
+	6300 5050 6300 4950
+Connection ~ 6300 4950
 $EndSCHEMATC

@@ -1,10 +1,10 @@
-Cmp-Mod V01 Created by CvPcb (2011-nov-30)-testing date = Tue 20 Mar 2012 20:29:20 ART
+Cmp-Mod V01 Created by CvPcb (2011-nov-30)-testing date = Wed 21 Mar 2012 12:24:45 ART
 
 BeginCmp
 TimeStamp = /4EAB48FD;
 Reference = 5-10K1;
-ValeurCmp = VR_LDR;
-IdModule  = R1;
+ValeurCmp = LDR;
+IdModule  = R3;
 EndCmp
 
 BeginCmp
@@ -113,6 +113,13 @@ IdModule  = C1;
 EndCmp
 
 BeginCmp
+TimeStamp = /4F69F22E;
+Reference = C16;
+ValeurCmp = 100nF;
+IdModule  = C1;
+EndCmp
+
+BeginCmp
 TimeStamp = /4F2BEAC4;
 Reference = CONN1;
 ValeurCmp = CONN_14;
@@ -129,35 +136,35 @@ EndCmp
 BeginCmp
 TimeStamp = /4DC4770A;
 Reference = D1;
-ValeurCmp = LED;
+ValeurCmp = LED1;
 IdModule  = LED-3MM;
 EndCmp
 
 BeginCmp
 TimeStamp = /4DC4770D;
 Reference = D2;
-ValeurCmp = LED;
+ValeurCmp = LED2;
 IdModule  = LED-3MM;
 EndCmp
 
 BeginCmp
 TimeStamp = /4DC47713;
 Reference = D3;
-ValeurCmp = LED;
+ValeurCmp = LED3;
 IdModule  = LED-3MM;
 EndCmp
 
 BeginCmp
 TimeStamp = /4DC47715;
 Reference = D4;
-ValeurCmp = LED;
+ValeurCmp = LED4;
 IdModule  = LED-3MM;
 EndCmp
 
 BeginCmp
 TimeStamp = /4F63D6FD;
 Reference = D5;
-ValeurCmp = LED;
+ValeurCmp = ON;
 IdModule  = LED-3MM;
 EndCmp
 
@@ -171,7 +178,7 @@ EndCmp
 BeginCmp
 TimeStamp = /4EAB3F14;
 Reference = K1;
-ValeurCmp = CONN_3;
+ValeurCmp = I2C;
 IdModule  = SIL-3;
 EndCmp
 
@@ -185,7 +192,7 @@ EndCmp
 BeginCmp
 TimeStamp = /4EAB402B;
 Reference = P2;
-ValeurCmp = CONN_2;
+ValeurCmp = BATT;
 IdModule  = molex_2_recto;
 EndCmp
 
@@ -290,14 +297,14 @@ EndCmp
 BeginCmp
 TimeStamp = /4DC482B6;
 Reference = SW1;
-ValeurCmp = SW_PUSH;
+ValeurCmp = BOTON;
 IdModule  = SW_PUSH_SMALL;
 EndCmp
 
 BeginCmp
 TimeStamp = /4F68247C;
 Reference = SW2;
-ValeurCmp = SW_PUSH;
+ValeurCmp = RESET;
 IdModule  = SW_PUSH_SMALL;
 EndCmp
 
