@@ -1,5 +1,5 @@
 TARGET = test
-MMCU = atmega88
+MMCU = atmega8
 F_CPU = 8000000UL
 
 CC = avr-gcc

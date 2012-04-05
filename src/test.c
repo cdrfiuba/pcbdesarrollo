@@ -1,14 +1,14 @@
 #include "board.h"
-#include "comm.h"
+//#include "comm.h"
 #include <avr/pgmspace.h>
 
 char hola[] PROGMEM = "hola mundo!\n";
 
 void startup (void) {
     // Cambio la frecuencia del micro a 8MHz
-    CLKPR = (1<<CLKPCE);    // Necesario para poder cambiar el prescaler.
-    CLKPR = 0;              // 8 MHZ
-    _delay_ms(10);          // espero para que se estabilice el clock.
+    //CLKPR = (1<<CLKPCE);    // Necesario para poder cambiar el prescaler.
+    //CLKPR = 0;              // 8 MHZ
+    //_delay_ms(10);          // espero para que se estabilice el clock.
 
     // Iniciamos y apagamos los LEDs
     Led1Init();
@@ -21,22 +21,25 @@ void startup (void) {
     Led4Off();
 
     // USART
-    usart_init();
-    usart_pin_init();
+    //usart_init();
+    //usart_pin_init();
 }
 
 int main (void) {
-    uint8_t i;
+    /*uint8_t i;
     char buffer[12];
+    */
 
     // Iniciamos los periféricos
     startup();
-
+    
+    /*
     // Levanto de memoria el mensaje
     for (i=0; i<12; i++) {
         buffer[i] = pgm_read_byte( &hola[i] );
     }
-
+    */
+    
     // Bucle infinito
     while(1) {
         Led1Toggle();
@@ -51,6 +54,6 @@ int main (void) {
         //i = usart_getchar();
         //usart_putchar(i);
         // DEBUG 3: mando un mensaje de bienvenida
-        usart_send_buffer(12, buffer);
+        //usart_send_buffer(12, buffer);
     }
 }
