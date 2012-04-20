@@ -97,5 +97,6 @@
 
 // BOTON
 #define BotonInit()      ClearBit(DDR_USER_BUTTON, USER_BUTTON_NUMBER)
+#define IsBotonOn()      IsBitClear(PORT_USER_BUTTON, USER_BUTTON_NUMBER)
 
 #endif
