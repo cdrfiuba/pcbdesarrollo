@@ -52,6 +52,18 @@
 #define PIN_LED4        def_pin_reg(PORT_LED4_NAME)
 #define DDR_LED4        def_ddr_reg(PORT_LED4_NAME)
 
+/*
+    INTERRUPCION 0 (BOTON DE USUARIO)
+    PORT D.0
+
+*/
+#define PORT_USER_BUTTON_NAME      D
+#define USER_BUTTON_NUMBER         0
+
+#define PORT_USER_BUTTON       def_port_reg(PORT_USER_BUTTON_NAME)
+#define PIN_USER_BUTTON        def_pin_reg(PORT_USER_BUTTON_NAME)
+#define DDR_USER_BUTTON        def_ddr_reg(PORT_USER_BUTTON_NAME)
+
 
 /* Definiciones de Funciones */
 
@@ -82,5 +94,8 @@
 #define Led4Off()       SetBit(PORT_LED4, LED4_NUMBER)
 #define IsLed4On()      IsBitClear(PORT_LED4, LED4_NUMBER)
 #define Led4Toggle()    {if ( IsLed4On() ) Led4Off(); else Led4On();}
+
+// BOTON
+#define BotonInit()      ClearBit(DDR_USER_BUTTON, USER_BUTTON_NUMBER)
 
 #endif
