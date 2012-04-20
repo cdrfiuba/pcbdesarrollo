@@ -1,4 +1,4 @@
-update=Thu 05 Apr 2012 02:17:39 PM ART
+update=Thu 19 Apr 2012 21:29:33 ART
 version=1
 last_client=pcbnew
 [cvpcb]
@@ -78,24 +78,23 @@ LibName30=valves
 LibName31=avr_atmega88
 [pcbnew]
 version=1
+LastNetListRead=pcbdesarrollo.net
 PadDrlX=320
-PadDimH=700
-PadDimV=700
+PadDimH=320
+PadDimV=320
 BoardThickness=630
-SgPcb45=1
 TxtPcbV=800
 TxtPcbH=600
 TxtModV=600
 TxtModH=600
 TxtModW=120
 VEgarde=100
-DrawLar=150
+DrawLar=120
 EdgeLar=150
 TxtLar=120
 MSegLar=150
-LastNetListRead=pcbdesarrollo.net
 [pcbnew/libraries]
-LibDir=
+LibDir=../placa
 LibName1=sockets
 LibName2=connect
 LibName3=discret
@@ -106,3 +105,5 @@ LibName7=display
 LibName8=valves
 LibName9=led
 LibName10=dip_sockets
+LibName11=DB9H
+LibName12=molex_2_recto
