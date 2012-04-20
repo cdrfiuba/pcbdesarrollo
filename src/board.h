@@ -96,7 +96,8 @@
 #define Led4Toggle()    {if ( IsLed4On() ) Led4Off(); else Led4On();}
 
 // BOTON
-#define BotonInit()      ClearBit(DDR_USER_BUTTON, USER_BUTTON_NUMBER)
-#define IsBotonOn()      IsBitClear(PORT_USER_BUTTON, USER_BUTTON_NUMBER)
+#define BotonPullUp()   SetBit(PORT_USER_BUTTON, USER_BUTTON_NUMBER)
+#define BotonInit()     ClearBit(DDR_USER_BUTTON, USER_BUTTON_NUMBER)
+#define IsBotonPush()   IsBitClear(PORT_USER_BUTTON, USER_BUTTON_NUMBER)
 
 #endif
