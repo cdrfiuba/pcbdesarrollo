@@ -6,13 +6,13 @@ TARGET = serial
 # MMCU es el microcontralador para el target para el avr-gcc
 # Para ver el listado de posibles opciones hacer:
 #      avrdude -p ?
-MMCU = atmega88pa
+MMCU = atmega88p
 
 # TARGET_P es el microcontrolador para el target del programador
 # Para el Atemga8: m8
 # Para ver el listado de posibles opciones ir a:
 #      http://avr-libc.nongnu.org/user-manual/index.html
-TARGET_P = m88pa
+TARGET_P = m88
 
 # HFUSE 
 # Para el Atmega8 0xD9 es el default  (pagina 223)

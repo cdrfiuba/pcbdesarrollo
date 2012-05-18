@@ -65,6 +65,19 @@
 #define DDR_USER_BUTTON        def_ddr_reg(PORT_USER_BUTTON_NAME)
 
 
+/*
+    LDR
+    PORT C.0
+
+*/
+#define PORT_LDR_NAME      C
+#define LDR_NUMBER         0
+
+#define PORT_LDR       def_port_reg(PORT_LDR_NAME)
+#define PIN_LDR        def_pin_reg(PORT_LDR_NAME)
+#define DDR_LDR        def_ddr_reg(PORT_LDR_NAME)
+
+
 /* Definiciones de Funciones */
 
 // LED1
