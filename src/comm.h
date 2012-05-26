@@ -25,12 +25,12 @@
 #define DDR_UTX         def_ddr_reg(PORT_UTX_NAME)
 
 //-------- Prototipos --------
-void usart_init (void);
+/*void usart_init (void);
 void usart_pin_init (void);
 inline void timeout_timer_usart_start(void);
 inline void timeout_timer_usart_stop(void);
 void usart_putchar( uint8_t data );
 void usart_send_buffer(uint8_t length, uint8_t buffer[]);
-unsigned char usart_getchar (void);
+unsigned char usart_getchar (void);*/
 
 #endif

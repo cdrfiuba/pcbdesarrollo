@@ -4,8 +4,8 @@ F_CPU = 8000000UL
 
 CC = avr-gcc
 CFLAGS = -Os -g
-SRC = $(shell find .  -name '*.[c]')
-INC = $(shell find .  -name '*.[h]')
+SRC = $(shell ls *.c)
+INC = $(shell ls *.h)
 
 ifeq ($(MMCU), atmega8)
 	TARGET_P = m8
@@ -14,7 +14,7 @@ ifeq ($(MMCU), atmega8)
 	MMCU_N = 0
 else
 ifeq ($(MMCU), atmega88)
-	TARGET_P = m88
+	TARGET_P = m88 -F
 	HFUSE = 0xdf
 	LFUSE = 0xe2
 	MMCU_N = 1
@@ -36,7 +36,7 @@ bin: $(SRC) $(INC)
 	avr-size -d $(TARGET).bin
 
 hex: bin
-	avr-objcopy -j .text -O ihex $(TARGET).bin $(TARGET).hex
+	avr-objcopy -j .text -j .data -O ihex $(TARGET).bin $(TARGET).hex
 
 
 # Reglas para programar el target
