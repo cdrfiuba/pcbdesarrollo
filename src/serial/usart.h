@@ -5,9 +5,9 @@
 #include <avr/interrupt.h>
 #include <avr/pgmspace.h>
 
-#define USART_BAUDRATE				9600
-#define BAUD_PRESCALER(x)			((F_CPU/((x) * 16UL))-1)
-#define USART0_INTERRUPT              // Comentar para deshabilitar USART por interrupcion
+#define USART_BAUDRATE		9600
+#define BAUD_PRESCALER		(unsigned int)( (F_CPU/(USART_BAUDRATE * 16.0)) - 0.5 )
+#define USART0_INTERRUPT  // Comentar para deshabilitar USART por interrupcion
 
 
 #define TX_BUFF_SIZE				64

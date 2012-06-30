@@ -29,8 +29,7 @@ void USART0Setup(uint16_t baudrate,uint8_t char_size ,uint8_t stop_bit ,uint8_t 
 
 	UCSR0B |= (1<<RXEN0) | (1<<TXEN0); // activamos la recepcion y transmision en el USART0
 
-	UBRR0H = (BAUD_PRESCALER(baudrate)>>8); // seteamos los prescalers del baudrate
-	UBRR0L = (BAUD_PRESCALER(baudrate));
+	UBRR0 = BAUD_PRESCALER; // seteamos el prescaler del baudrate
 	
 	UCSR0C |= (mode<<UMSEL00); // seteamos el modo de operacion syncronico o asyncronico
 
