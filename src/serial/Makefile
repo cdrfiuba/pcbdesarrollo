@@ -1,20 +1,21 @@
-#CLK = 8000000UL
-CLK = 18432000UL
-#CLK = 2304000UL
+#CLK = 8000000UL   # 8 Mhz interno
+#CLK = 1000000UL   # 1 Mhz interno
+CLK = 18432000UL  # cristal externo
+#CLK = 2304000UL   # cristal externo / 8
 
 # TARGET es el nombre del proyecto
 TARGET = serial
 
 # MMCU es el microcontralador para el target para el avr-gcc
-# Para ver el listado de posibles opciones hacer:
-#      avrdude -p ?
-TARGET_P = m88
-
-# TARGET_P es el microcontrolador para el target del programador
-# Para el Atemga8: m8
 # Para ver el listado de posibles opciones ir a:
 #      http://avr-libc.nongnu.org/user-manual/index.html
 MMCU = atmega88a
+
+# Para ver el listado de posibles opciones hacer:
+# TARGET_P es el microcontrolador para el target del programador
+# Para el Atemga8: m8
+#      avrdude -p ?
+TARGET_P = m88
 
 # HFUSE 
 # Para el Atmega8 0xD9 es el default  (pagina 223)
@@ -36,8 +37,8 @@ LFUSE = 0xEF
 SRC = main.c usart.c
 INC = usart.h
 
-# Flags de optimizacion '-Os' tamaño '-O3' velocidad '-O0
-# Si se deja -O vacio ¿elije el compilador?
+# Flags de optimizacion '-Os' tamaño '-O3' velocidad
+# Si se deja -O vacio el compilador elige '-01'
 CFLAGS = -O2 -Wall
 
 CDEFINES = -DF_CPU=$(CLK)
