@@ -1,66 +1,33 @@
-#CLK = 8000000UL   # 8 Mhz interno
-#CLK = 1000000UL   # 1 Mhz interno
-CLK = 18432000UL  # cristal externo
-#CLK = 2304000UL   # cristal externo / 8
+# Makefile general para uso de la bilioteca.
+# Copiar este Makefile dentro de cada proyecto y editar las opciones
+# correspondientes
 
-# TARGET es el nombre del proyecto
-TARGET = serial
+# TARGET es el nombre del proyecto y es el nombre que se usa para generar el
+# binario
+TARGET = main
+
+# PATH de la biblioteca
+LIBCDR = ../library
+
+OBJECTS = $(TARGET).o
+# Si hay algun otro archivo que deba compilarse debe agregarse el .o 
+# correspondiente. Por ejemplo un archivo func.c que tiene funciones 
+# encapsuladas, debe incluirse:
+# OBJECTS += func.o
+OBJECTS +=
 
 # MMCU es el microcontralador para el target para el avr-gcc
 # Para ver el listado de posibles opciones ir a:
 #      http://avr-libc.nongnu.org/user-manual/index.html
+# atmega8/88/88a/88p/88pa
 MMCU = atmega88a
 
-# Para ver el listado de posibles opciones hacer:
-# TARGET_P es el microcontrolador para el target del programador
-# Para el Atemga8: m8
-#      avrdude -p ?
-TARGET_P = m88
+OPTIMIZATION = 2
 
-# HFUSE 
-# Para el Atmega8 0xD9 es el default  (pagina 223)
-# Para el Atmega88 0xDF es el default  (pagina 299)
-# ojo con el bit 5, siempre debe ser 0 -> XX0XXXXX
-HFUSE = 0xDF
+#CLK_EXT = 18432000UL #cristal externo
+#CLK_INT =  8243700UL #si se conoce con mayor precision el oscilador interno
 
-# LFUSE
-# Para el Atemega8:  (pagina 224)
-# 	0xE1 es el default, con oscilador interno de 1Mhz
-# 	0xE4 es el default + oscilador interno de 8Mhz
-# Para el Atemega88:  (pagina 301)
-# 	0x62 es el default, con oscilador interno de 1Mhz
-# 	0xE2 es el default + oscilador interno de 8Mhz
-# 	0x6F cristal externo con DIV8
-# 	0xEF cristal externo sin prescaler
-LFUSE = 0xEF
+#FUSE_DIV8 = 0 # 1 si usamos el prescaler de clock en 8. 0 sin prescaler
+#FUSE_CLKEXT = 1 # 1 si usamos el clock externo. 0 si usamos el clock interno
 
-SRC = main.c usart.c
-INC = usart.h
-
-# Flags de optimizacion '-Os' tamaño '-O3' velocidad
-# Si se deja -O vacio el compilador elige '-01'
-CFLAGS = -O2 -Wall
-
-CDEFINES = -DF_CPU=$(CLK)
-
-CLDFLAGS = 
-
-AVROBJFLAGS = -j .text -j .data
-
-all: hex
-
-
-hex: main.c usart.c
-	avr-gcc $(CFLAGS) $(CDEFINES) $(CLDFLAGS) -mmcu=$(MMCU) -o $(TARGET).bin $(SRC)
-	avr-objcopy $(AVROBJFLAGS) -O ihex $(TARGET).bin $(TARGET).hex
-	avr-objdump -h -S $(TARGET).bin > "$(TARGET).lst"
-	avr-size -d $(TARGET).bin
-
-program: hex
-	avrdude -c usbtiny -p $(TARGET_P) -U flash:w:$(TARGET).hex:i
-
-fuses:
-	avrdude -c usbtiny -p $(TARGET_P) -U hfuse:w:$(HFUSE):m -U lfuse:w:$(LFUSE):m
-
-clean:
-	rm -rf $(TARGET).hex $(TARGET).bin $(TARGET).s $(TARGET).lst *.o
+include $(LIBCDR)/setup.mk
