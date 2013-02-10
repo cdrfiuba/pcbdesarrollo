@@ -25,19 +25,19 @@ volatile unsigned char rx_out;
 /* =================================================== */
 
 
-void USART0Setup(uint16_t baudrate,uint8_t char_size ,uint8_t stop_bit ,uint8_t parity ,uint8_t mode){
+void USART0Setup() {
 
 	UCSR0B |= (1<<RXEN0) | (1<<TXEN0); // activamos la recepcion y transmision en el USART0
 
-	UBRR0 = BAUD_PRESCALER; // seteamos el prescaler del baudrate
+	UBRR0 = BAUD_PRESCALER(USART0_BAUDRATE); // seteamos el prescaler del baudrate
 	
-	UCSR0C |= (mode<<UMSEL00); // seteamos el modo de operacion syncronico o asyncronico
+	UCSR0C |= (USART0_MODE<<UMSEL00); // seteamos el modo de operacion syncronico o asyncronico
 
-	UCSR0C |= (parity<<UPM00); // seteamos la cantidad de bits de paridad que vamos a usar
+	UCSR0C |= (USART0_PARITY<<UPM00); // seteamos la cantidad de bits de paridad que vamos a usar
 
-	UCSR0C |= (stop_bit<<USBS0); // seteamos la cantidad de bits de parada que vamos a usar
+	UCSR0C |= (USART0_STOP_BIT<<USBS0); // seteamos la cantidad de bits de parada que vamos a usar
 
-	UCSR0C |= (char_size<<UCSZ00);
+	UCSR0C |= (USART0_CHARSIZE<<UCSZ00);
 #ifdef USART0_INTERRUPT
     UCSR0B |= (1<<RXCIE0) | (1<<UDRIE0);
     sei();

@@ -2,8 +2,6 @@
 #define _BOARD_H_
 
 #include <avr/io.h>
-#include <avr/interrupt.h>
-#include <util/delay.h>
 #include "defs.h"
 
 /* Definiciones de Pines */
@@ -54,11 +52,11 @@
 
 /*
     INTERRUPCION 0 (BOTON DE USUARIO)
-    PORT D.0
+    PORT D.2
 
 */
 #define PORT_USER_BUTTON_NAME      D
-#define USER_BUTTON_NUMBER         0
+#define USER_BUTTON_NUMBER         2
 
 #define PORT_USER_BUTTON       def_port_reg(PORT_USER_BUTTON_NAME)
 #define PIN_USER_BUTTON        def_pin_reg(PORT_USER_BUTTON_NAME)
@@ -70,8 +68,9 @@
     PORT C.0
 
 */
-#define PORT_LDR_NAME      C
-#define LDR_NUMBER         0
+#define PORT_LDR_NAME   C
+#define LDR_NUMBER      0
+#define LDRADCCH        0
 
 #define PORT_LDR       def_port_reg(PORT_LDR_NAME)
 #define PIN_LDR        def_pin_reg(PORT_LDR_NAME)
@@ -86,6 +85,7 @@
 #define Led1Off()       SetBit(PORT_LED1, LED1_NUMBER)
 #define IsLed1On()      IsBitClear(PORT_LED1, LED1_NUMBER)
 #define Led1Toggle()    {if ( IsLed1On() ) Led1Off(); else Led1On();}
+//#define Led1Toggle()    SetBit(PIN_LED1, LED1_NUMBER)
 
 // LED2
 #define Led2Init()      SetBit(DDR_LED2, LED2_NUMBER)
@@ -93,6 +93,7 @@
 #define Led2Off()       SetBit(PORT_LED2, LED2_NUMBER)
 #define IsLed2On()      IsBitClear(PORT_LED2, LED2_NUMBER)
 #define Led2Toggle()    {if ( IsLed2On() ) Led2Off(); else Led2On();}
+//#define Led2Toggle()    SetBit(PIN_LED2, LED2_NUMBER)
 
 // LED3
 #define Led3Init()      SetBit(DDR_LED3, LED3_NUMBER)
@@ -100,6 +101,7 @@
 #define Led3Off()       SetBit(PORT_LED3, LED3_NUMBER)
 #define IsLed3On()      IsBitClear(PORT_LED3, LED3_NUMBER)
 #define Led3Toggle()    {if ( IsLed3On() ) Led3Off(); else Led3On();}
+//#define Led3Toggle()    SetBit(PIN_LED3, LED3_NUMBER)
 
 // LED4
 #define Led4Init()      SetBit(DDR_LED4, LED4_NUMBER)
@@ -107,6 +109,7 @@
 #define Led4Off()       SetBit(PORT_LED4, LED4_NUMBER)
 #define IsLed4On()      IsBitClear(PORT_LED4, LED4_NUMBER)
 #define Led4Toggle()    {if ( IsLed4On() ) Led4Off(); else Led4On();}
+//#define Led4Toggle()    SetBit(PIN_LED4, LED4_NUMBER)
 
 // BOTON
 #define BotonPullUp()   SetBit(PORT_USER_BUTTON, USER_BUTTON_NUMBER)
