@@ -4,8 +4,10 @@
 # binario
 TARGET = blinky
 
-SRC = main.c usart.c
-INC = usart.h
+SRC = blinky.c
+INC = 
+
+LIBCDR = ../library
 
 # MMCU es el microcontralador para el target para el avr-gcc
 # Para ver el listado de posibles opciones ir a:
@@ -19,7 +21,6 @@ MMCU = atmega88a
 # Para el Atemga88/88a/88p/88pa: m88
 #      avrdude -p ?
 TARGET_P = m88
-
 
 # HFUSE 
 # Para el Atmega8 0xD9 es el default  (pagina 223)
@@ -68,6 +69,9 @@ AVROBJFLAGS =
 AVROBJFLAGS += -j .text
 AVROBJFLAGS += -j .data
 
+
+INCLUDES = $(LIBCDR)
+
 # Reglas
 ########
 
@@ -76,7 +80,7 @@ all: hex
 
 elf: $(SRSC) $(INC)
 	@echo "Clock = $(CLK) | Lfuse = $(LFUSE) | Hfuse = $(HFUSE)"
-	avr-gcc $(CFLAGS) $(CDEFINES) -o $(TARGET).elf $(SRC)
+	avr-gcc $(CFLAGS) $(CDEFINES) -o $(TARGET).elf $(SRC) -I$(INCLUDES)
 	avr-objdump -h -S $(TARGET).elf > $(TARGET).lst
 	avr-size -d $(TARGET).elf
 

@@ -4,6 +4,16 @@ syntax: glob
 # archivos de compilación
 *.bin
 *.hex
+*.lst
+*.elf
+*.o
+*.a
 
 # archivos de hg
 *.orig
+
+# archivos de kicad
+*.gbl
+*.drl
+*-cache.lib
+*.dcm
