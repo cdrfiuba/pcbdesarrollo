@@ -1,9 +1,9 @@
 CC = avr-gcc
-LD = avr-g++
 AR = avr-ar
 OBJDUMP = avr-objdump
 OBJCOPY = avr-objcopy
 SIZE = avr-size
+RM = rm -rf
 
 include $(LIBCDR)/clkdef.mk
 include $(LIBCDR)/target.mk
@@ -25,19 +25,20 @@ CFLAGS += -Wall
 
 #CFLAGS += -MD -MP -MT $(*F).o -MF dep/$(@F).d 
 
-CLDFLAGS =
+CCINCLUDES = -I$(LIBCDR)
 
-AVROBJFLAGS =
-AVROBJFLAGS += -O binary
-AVROBJFLAGS += -j .text
-AVROBJFLAGS += -j .data
+LIBS := -lcdr $(LIBS)
+LDFLAGS = -Wl,-Map=$(TARGET).map,--gc-sections -L$(LIBCDR) -mmcu=$(MMCU)
 
 LIBINCLUDE = $(LIBCDR)
 
 COMMON_OBJECTS = usart.o adc.o
 COMMON_OBJECTS := $(addprefix $(LIBCDR)/, $(COMMON_OBJECTS))
 
-HEXFLASHFLAGS = -R .eeprom -R .fuse -R .lock -R .signature
+AVROBJFLAGS := -j .data -j .text
+BINFLASHFLAGS := $(AVROBJFLAGS) -O binary
+HEXFLASHFLAGS := $(AVROBJFLAGS) -O ihex
+#HEXFLASHFLAGS += -R .eeprom -R .fuse -R .lock -R .signature
 
 # Reglas
 ########
@@ -47,20 +48,20 @@ all: hex
 
 elf: $(OBJECTS) libcdr.a
 	@echo "Clock = $(CLK) | Lfuse = $(LFUSE) | Hfuse = $(HFUSE)"
-	$(CC) $(CLDFLAGS) $(OBJECTS) -o $(TARGET).elf -L$(LIBINCLUDE) -lcdr 
-	$(OBJDUMP) -h -S $(TARGET).elf > $(TARGET).lst
-	$(SIZE) -d $(TARGET).elf
+	@$(CC) $(LDFLAGS) -o $(TARGET).elf $(OBJECTS) $(LIBS) 
+	@$(OBJDUMP) -h -S $(TARGET).elf > $(TARGET).lst
+	@$(SIZE) -d --format=avr --mcu=$(MMCU) $(TARGET).elf
+	@$(SIZE) -d $(TARGET).elf
 
 bin: elf
-	$(OBJCOPY) $(AVROBJFLAGS) $(TARGET).elf $(TARGET).bin
-	#$(SIZE) -d $(TARGET).bin
+	@$(OBJCOPY) $(BINFLASHFLAGS) $(TARGET).elf $(TARGET).bin
 
 hex: bin
-	$(OBJCOPY) $(HEXFLASHFLAGS) -O ihex $(TARGET).elf $(TARGET).hex
+	@$(OBJCOPY) $(HEXFLASHFLAGS) $(TARGET).elf $(TARGET).hex
 
 libcdr.a: $(COMMON_OBJECTS)
-	$(AR) -rcs $(LIBCDR)/libcdr.a $(COMMON_OBJECTS)
-	$(OBJDUMP) -h -S $(LIBCDR)/libcdr.a >$(LIBCDR)/libcdr.lss
+	@$(AR) -rcs $(LIBCDR)/libcdr.a $(COMMON_OBJECTS)
+	@$(OBJDUMP) -h -S $(LIBCDR)/libcdr.a >$(LIBCDR)/libcdr.lst
 
 #########################################################################
 #  Default rules to compile .c and .cpp file to .o
@@ -68,7 +69,7 @@ libcdr.a: $(COMMON_OBJECTS)
 #  .c or .cpp files to .s
 
 .c.o:
-	$(CC) $(CFLAGS) $(CDEFINES) -I$(LIBINCLUDE) -c $< -o $(<:.c=.o)
+	@$(CC) $(CFLAGS) $(CDEFINES) $(CCINCLUDES) -c $< -o $(<:.c=.o)
 
 # Reglas para programar el target
 program: hex
@@ -97,16 +98,12 @@ eeprom_write:
 	avrdude -c usbtiny -p $(TARGET_P) -U eeprom:w:eeprom.hex:r
 
 clean:
-	rm -rf $(TARGET).bin 
-	rm -rf $(TARGET).lst 
-	rm -rf $(TARGET).hex
-	rm -rf $(TARGET).elf
-	rm -rf *.o 
-	rm -rf hfuse.hex lfuse.hex 
-	rm -rf $(COMMON_OBJECTS)
-	rm -rf $(OBJECTS)
-	rm -rf $(LIBCDR)/libcdr.a
-	rm -rf $(LIBCDR)/libcdr.lss
+	@$(RM) $(TARGET).elf $(TARGET).hex $(TARGET).lst $(TARGET).map $(TARGET).bin 
+	@$(RM) $(OBJECTS)
+	@$(RM) $(COMMON_OBJECTS)
+	@$(RM) $(LIBCDR)/libcdr.a
+	@$(RM) $(LIBCDR)/libcdr.lst
+	@$(RM) hfuse.hex lfuse.hex 
 
 .PHONY: clean eeprom_read eeprom_write fuse fuses_read program program_dw
 
