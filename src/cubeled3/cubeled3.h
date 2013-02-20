@@ -81,8 +81,8 @@
 #define PIN_R2        def_pin_reg(PORT_R2_NAME)
 #define DDR_R2        def_ddr_reg(PORT_R2_NAME)
 
-#define PORT_R3_NAME  D
-#define R3_NUM        4
+#define PORT_R3_NAME  C
+#define R3_NUM        0
 
 #define PORT_R3       def_port_reg(PORT_R3_NAME)
 #define PIN_R3        def_pin_reg(PORT_R3_NAME)
