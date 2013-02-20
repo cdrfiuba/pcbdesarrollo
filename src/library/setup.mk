@@ -48,7 +48,7 @@ all: hex
 
 elf: $(OBJECTS) libcdr.a
 	@echo "Clock = $(CLK) | Lfuse = $(LFUSE) | Hfuse = $(HFUSE)"
-	@$(CC) $(LDFLAGS) -o $(TARGET).elf $(OBJECTS) $(LIBS) 
+	$(CC) $(LDFLAGS) -o $(TARGET).elf $(OBJECTS) $(LIBS) 
 	@$(OBJDUMP) -h -S $(TARGET).elf > $(TARGET).lst
 	@$(SIZE) -d --format=avr --mcu=$(MMCU) $(TARGET).elf
 	@$(SIZE) -d $(TARGET).elf
@@ -69,7 +69,7 @@ libcdr.a: $(COMMON_OBJECTS)
 #  .c or .cpp files to .s
 
 .c.o:
-	@$(CC) $(CFLAGS) $(CDEFINES) $(CCINCLUDES) -c $< -o $(<:.c=.o)
+	$(CC) $(CFLAGS) $(CDEFINES) $(CCINCLUDES) -c $< -o $(<:.c=.o)
 
 # Reglas para programar el target
 program: hex

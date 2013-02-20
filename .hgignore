@@ -6,8 +6,10 @@ syntax: glob
 *.hex
 *.lst
 *.elf
+*.map
 *.o
 *.a
+*.d
 
 # archivos de hg
 *.orig
