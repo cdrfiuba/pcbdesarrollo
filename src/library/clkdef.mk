@@ -25,7 +25,7 @@ ifeq ($(MMCU), atmega8)
 	# 0xE4 (oscilador interno de 8 Mhz) CLK = CLK_INT
 	LFUSE = 0xE4
 
-	CLK = CLK_INT
+	CLK = $(CLK_INT)
 
 else ifeq ($(findstring atmega88,$(MMCU)), atmega88)
  	# 0xDF es el default  (pagina 299)

@@ -14,7 +14,7 @@ OBJECTS = $(TARGET).o
 # correspondiente. Por ejemplo un archivo func.c que tiene funciones 
 # encapsuladas, debe incluirse:
 # OBJECTS += func.o
-OBJECTS +=
+OBJECTS += main.o
 
 # MMCU es el microcontralador para el target para el avr-gcc
 # Para ver el listado de posibles opciones ir a:
