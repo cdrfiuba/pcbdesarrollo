@@ -4,6 +4,8 @@
 # binario
 TARGET = blinky
 
+# Agregar a SRC todos los archivos .c que deben compilarse para el proyecto
+# Agregar a INC todas las bibliotecas que son incluidos y no 
 SRC = blinky.c
 INC = 
 
@@ -20,7 +22,7 @@ MMCU = atmega88a
 # Para el Atemga8: m8
 # Para el Atemga88/88a/88p/88pa: m88
 #      avrdude -p ?
-TARGET_P = m88
+TARGET_P = m88pa
 
 # HFUSE 
 # Para el Atmega8 0xD9 es el default  (pagina 223)
@@ -78,7 +80,7 @@ INCLUDES = $(LIBCDR)
 # Reglas para compilar y generar el binario para subir al target
 all: hex
 
-elf: $(SRSC) $(INC)
+elf: $(SRC) $(INC)
 	@echo "Clock = $(CLK) | Lfuse = $(LFUSE) | Hfuse = $(HFUSE)"
 	avr-gcc $(CFLAGS) $(CDEFINES) -o $(TARGET).elf $(SRC) -I$(INCLUDES)
 	avr-objdump -h -S $(TARGET).elf > $(TARGET).lst

@@ -5,6 +5,7 @@ OBJCOPY = avr-objcopy
 SIZE = avr-size
 RM = rm -rf
 
+include $(LIBCDR)/config.mk
 include $(LIBCDR)/clkdef.mk
 include $(LIBCDR)/target.mk
 
@@ -13,7 +14,6 @@ CDEFINES += -DF_CPU=$(CLK)
 CDEFINES += -mmcu=$(MMCU)
 CDEFINES += -DMMCUN=$(MMCU_N)
 
-OPTIMIZATION ?= 2
 # Flags de compilacion
 CFLAGS =
 # Optimizacion '-Os' tamaño '-O3' velocidad. Con -O vacio el compilador elige '-01'
