@@ -19,3 +19,4 @@ syntax: glob
 *.drl
 *-cache.lib
 *.dcm
+*.000
