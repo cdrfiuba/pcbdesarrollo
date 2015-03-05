@@ -1,136 +1,136 @@
-Cmp-Mod V01 Created by Cvpcb 0.201502050101+5404~21~ubuntu14.04.1-product   date = vie 20 feb 2015 01:04:25 ART
+Cmp-Mod V01 Created by Cvpcb 0.201503020946+5465~21~ubuntu14.04.1-product   date = mar 03 mar 2015 12:24:01 ART
 
 BeginCmp
 TimeStamp = /4EAB48FD;
 Reference = 5-10K1;
 ValeurCmp = LDR;
-IdModule  = Discret:R3;
+IdModule  = Resistors_ThroughHole:Resistor_Horizontal_RM10mm;
 EndCmp
 
 BeginCmp
 TimeStamp = /4DC47BFA;
 Reference = C1;
 ValeurCmp = 1uF;
-IdModule  = Discret:C1V5;
+IdModule  = Capacitors_ThroughHole:Capacitor5x6RM2.5;
 EndCmp
 
 BeginCmp
 TimeStamp = /4DC47C0A;
 Reference = C2;
 ValeurCmp = 1uF;
-IdModule  = Discret:C1V5;
+IdModule  = Capacitors_ThroughHole:Capacitor5x6RM2.5;
 EndCmp
 
 BeginCmp
 TimeStamp = /4DC475FC;
 Reference = C3;
 ValeurCmp = 1uF;
-IdModule  = Discret:C1V5;
+IdModule  = Capacitors_ThroughHole:Capacitor5x6RM2.5;
 EndCmp
 
 BeginCmp
 TimeStamp = /4DC47C36;
 Reference = C4;
 ValeurCmp = 1uF;
-IdModule  = Discret:C1V5;
+IdModule  = Capacitors_ThroughHole:Capacitor5x6RM2.5;
 EndCmp
 
 BeginCmp
 TimeStamp = /4DC47C22;
 Reference = C5;
 ValeurCmp = 1uF;
-IdModule  = Discret:C1V5;
+IdModule  = Capacitors_ThroughHole:Capacitor5x6RM2.5;
 EndCmp
 
 BeginCmp
 TimeStamp = /4DC477D7;
 Reference = C6;
 ValeurCmp = 100nF;
-IdModule  = Discret:C1;
+IdModule  = Capacitors_ThroughHole:Capacitor3MMDiscRM2.5;
 EndCmp
 
 BeginCmp
 TimeStamp = /4EAB40FA;
 Reference = C7;
 ValeurCmp = 100nF;
-IdModule  = Discret:C1;
+IdModule  = Capacitors_ThroughHole:Capacitor3MMDiscRM2.5;
 EndCmp
 
 BeginCmp
 TimeStamp = /4EAB40F5;
 Reference = C8;
 ValeurCmp = 10uF;
-IdModule  = Discret:C1V5;
+IdModule  = Capacitors_ThroughHole:Capacitor5x6RM2.5;
 EndCmp
 
 BeginCmp
 TimeStamp = /4EAB40FD;
 Reference = C9;
 ValeurCmp = 100nF;
-IdModule  = Discret:C1;
+IdModule  = Capacitors_ThroughHole:Capacitor3MMDiscRM2.5;
 EndCmp
 
 BeginCmp
 TimeStamp = /4F656846;
 Reference = C10;
 ValeurCmp = 10uF;
-IdModule  = Discret:C1V5;
+IdModule  = Capacitors_ThroughHole:Capacitor5x6RM2.5;
 EndCmp
 
 BeginCmp
 TimeStamp = /4F656832;
 Reference = C11;
 ValeurCmp = 10uF;
-IdModule  = Discret:C1V5;
+IdModule  = Capacitors_ThroughHole:Capacitor5x6RM2.5;
 EndCmp
 
 BeginCmp
 TimeStamp = /4F67AD6C;
 Reference = C12;
 ValeurCmp = 15p;
-IdModule  = Discret:C1;
+IdModule  = Capacitors_ThroughHole:Capacitor3MMDiscRM2.5;
 EndCmp
 
 BeginCmp
 TimeStamp = /4F67AD79;
 Reference = C13;
 ValeurCmp = 15p;
-IdModule  = Discret:C1;
+IdModule  = Capacitors_ThroughHole:Capacitor3MMDiscRM2.5;
 EndCmp
 
 BeginCmp
 TimeStamp = /4F6827C3;
 Reference = C14;
 ValeurCmp = 100nF;
-IdModule  = Discret:C1;
+IdModule  = Capacitors_ThroughHole:Capacitor3MMDiscRM2.5;
 EndCmp
 
 BeginCmp
 TimeStamp = /4F67E9AC;
 Reference = C15;
 ValeurCmp = 100nF;
-IdModule  = Discret:C1;
+IdModule  = Capacitors_ThroughHole:Capacitor3MMDiscRM2.5;
 EndCmp
 
 BeginCmp
 TimeStamp = /4F69F22E;
 Reference = C16;
 ValeurCmp = 100nF;
-IdModule  = Discret:C1;
+IdModule  = Capacitors_ThroughHole:Capacitor3MMDiscRM2.5;
 EndCmp
 
 BeginCmp
 TimeStamp = /4F2BEAC4;
 Reference = CONN1;
 ValeurCmp = CONN_14;
-IdModule  = SIL-14;
+IdModule  = Socket_Strips:Socket_Strip_Straight_1x14;
 EndCmp
 
 BeginCmp
 TimeStamp = /4F2BEAD3;
 Reference = CONN2;
 ValeurCmp = CONN_14;
-IdModule  = SIL-14;
+IdModule  = Socket_Strips:Socket_Strip_Straight_1x14;
 EndCmp
 
 BeginCmp
@@ -172,7 +172,7 @@ BeginCmp
 TimeStamp = /4DC47ED4;
 Reference = J1;
 ValeurCmp = DB9;
-IdModule  = DB9H;
+IdModule  = Popurri_CDR:DB9-F;
 EndCmp
 
 BeginCmp
@@ -228,77 +228,98 @@ BeginCmp
 TimeStamp = /4EAB3F14;
 Reference = K1;
 ValeurCmp = I2C;
-IdModule  = SIL-3;
+IdModule  = Socket_Strips:Socket_Strip_Straight_1x03;
 EndCmp
 
 BeginCmp
 TimeStamp = /4DC47FA6;
 Reference = P1;
 ValeurCmp = CONN_3X2;
-IdModule  = pin_array_3x2;
+IdModule  = Socket_Strips:Socket_Strip_Straight_2x03;
 EndCmp
 
 BeginCmp
 TimeStamp = /4EAB402B;
 Reference = P2;
 ValeurCmp = BATT;
-IdModule  = molex_2_recto;
+IdModule  = Popurri_CDR:molex_2_recto;
 EndCmp
 
 BeginCmp
 TimeStamp = /4F67DD5A;
 Reference = P3;
 ValeurCmp = CONN_3;
-IdModule  = PIN_ARRAY_3X1;
+IdModule  = Socket_Strips:Socket_Strip_Straight_1x03;
+EndCmp
+
+BeginCmp
+TimeStamp = /54E8D67F;
+Reference = P4;
+ValeurCmp = CONN_02X20;
+IdModule  = Socket_Strips:Socket_Strip_Straight_2x20;
+EndCmp
+
+BeginCmp
+TimeStamp = /54E91AEA;
+Reference = P5;
+ValeurCmp = BATT;
+IdModule  = Connect:PINHEAD1-2;
+EndCmp
+
+BeginCmp
+TimeStamp = /54F5F045;
+Reference = P6;
+ValeurCmp = BATT;
+IdModule  = Connect:bornier2;
 EndCmp
 
 BeginCmp
 TimeStamp = /4DC47664;
 Reference = R1;
 ValeurCmp = 220;
-IdModule  = Discret:R3;
+IdModule  = Resistors_ThroughHole:Resistor_Horizontal_RM10mm;
 EndCmp
 
 BeginCmp
 TimeStamp = /4DC476A1;
 Reference = R2;
 ValeurCmp = 220;
-IdModule  = Discret:R3;
+IdModule  = Resistors_ThroughHole:Resistor_Horizontal_RM10mm;
 EndCmp
 
 BeginCmp
 TimeStamp = /4DC476A7;
 Reference = R3;
 ValeurCmp = 220;
-IdModule  = Discret:R3;
+IdModule  = Resistors_ThroughHole:Resistor_Horizontal_RM10mm;
 EndCmp
 
 BeginCmp
 TimeStamp = /4DC476AB;
 Reference = R4;
 ValeurCmp = 220;
-IdModule  = Discret:R3;
+IdModule  = Resistors_ThroughHole:Resistor_Horizontal_RM10mm;
 EndCmp
 
 BeginCmp
 TimeStamp = /4EAB4910;
 Reference = R5;
 ValeurCmp = 1K;
-IdModule  = Discret:R3;
+IdModule  = Resistors_ThroughHole:Resistor_Horizontal_RM10mm;
 EndCmp
 
 BeginCmp
 TimeStamp = /4F63D71F;
 Reference = R6;
 ValeurCmp = 220;
-IdModule  = Discret:R3;
+IdModule  = Resistors_ThroughHole:Resistor_Horizontal_RM10mm;
 EndCmp
 
 BeginCmp
 TimeStamp = /4F682485;
 Reference = R7;
 ValeurCmp = 10k;
-IdModule  = Discret:R3;
+IdModule  = Resistors_ThroughHole:Resistor_Horizontal_RM10mm;
 EndCmp
 
 BeginCmp
@@ -333,14 +354,14 @@ BeginCmp
 TimeStamp = /4F656A29;
 Reference = U3;
 ValeurCmp = 7805FIX;
-IdModule  = TO220V-123;
+IdModule  = Transistors_TO-220:TO-220_Neutral123_Vertical_LargePads;
 EndCmp
 
 BeginCmp
-TimeStamp = /4F6567CE;
+TimeStamp = /54F5C9EE;
 Reference = U4;
-ValeurCmp = 7133;
-IdModule  = Discret:TO92;
+ValeurCmp = AP1117T33;
+IdModule  = Transistors_TO-220:TO-220_Neutral123_Vertical_LargePads;
 EndCmp
 
 BeginCmp
