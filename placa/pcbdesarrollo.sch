@@ -339,7 +339,7 @@ U 1 1 4EAB48FD
 P 2200 4000
 F 0 "LDR1" V 2280 4000 50  0000 C CNN
 F 1 "LDR 5-10 k" V 2350 4000 50  0000 C CNN
-F 2 "Socket_Strips:Socket_Strip_Straight_1x03" H 2200 4000 60  0001 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" H 2200 4000 60  0001 C CNN
 F 3 "" H 2200 4000 60  0001 C CNN
 	1    2200 4000
 	1    0    0    -1  
@@ -655,7 +655,7 @@ F 1 "1uF" H 4350 6900 50  0000 L CNN
 F 2 "Capacitors_ThroughHole:C_Radial_D5_L6_P2.5" H 4300 7000 60  0001 C CNN
 F 3 "" H 4300 7000 60  0001 C CNN
 	1    4300 7000
-	1    0    0    -1  
+	-1   0    0    1   
 $EndComp
 $Comp
 L CAPAPOL C2

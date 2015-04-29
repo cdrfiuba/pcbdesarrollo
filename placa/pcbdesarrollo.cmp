@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by Cvpcb 0.201503020946+5465~21~ubuntu14.04.1-product   date = lun 16 mar 2015 01:38:40 ART
+Cmp-Mod V01 Created by Cvpcb 0.201504141001+5596~22~ubuntu14.04.1-product   date = mié 29 abr 2015 11:39:31 ART
 
 BeginCmp
 TimeStamp = /4DC47BFA;
@@ -228,7 +228,7 @@ BeginCmp
 TimeStamp = /4EAB48FD;
 Reference = LDR1;
 ValeurCmp = LDR 5-10 k;
-IdModule  = Socket_Strips:Socket_Strip_Straight_1x03;
+IdModule  = Resistors_ThroughHole:Resistor_Horizontal_RM10mm;
 EndCmp
 
 BeginCmp
