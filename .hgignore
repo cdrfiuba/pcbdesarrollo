@@ -20,3 +20,4 @@ syntax: glob
 *-cache.lib
 *.dcm
 *.000
+placa/Fabricacion/*
