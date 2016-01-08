@@ -28,7 +28,7 @@
 
 
 
-#define USART0_BAUDRATE   115200
+#define USART0_BAUDRATE   38400
 #define USART0_MODE       USART0_MODE_ASYNC
 #define USART0_PARITY     USART0_PARITY_DIS
 #define USART0_STOP_BIT   USART0_STOP_1BIT// Bit de parada (1-bit)
@@ -46,6 +46,7 @@ unsigned char USART0Receive(void);
 void           USART0Transmit(char);
 
 void           USART0Puts(char*);
+void           USART0Putc(char);
 void           USART0PutsP(char*);
 
 unsigned char USART0TXBuffLen(void);

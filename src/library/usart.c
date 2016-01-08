@@ -73,6 +73,10 @@ void USART0Transmit(char c){
 #endif
 }
 
+void USART0Putc(char c){
+	USART0Transmit(c);
+}
+
 void USART0Puts(char *string){
 	while (*string)
 		USART0Transmit(*string++);
